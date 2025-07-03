@@ -13,4 +13,10 @@
   --color-gray-300: #d1d5db;
   --color-red-600: #dc2626;
   --color-gray-50: #f9fafb;
+
+  --color-white: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
 }

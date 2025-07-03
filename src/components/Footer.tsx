@@ -1,13 +1,10 @@
-import React from "react";
-
-const Footer: React.FC = () => {
+export function Footer() {
   return (
-    <footer className="bg-[#0D1B2A] text-[#CBD5E0] text-xs py-4">
-      <div className="text-center">
-        &copy; {new Date().getFullYear()} Talentys. Todos os direitos reservados.
+    <footer className="flex justify-center items-center bg-oxford-blue text-white text-xs py-8">
+      <div className="text-center text-sm text-gray-300">
+        &copy; {new Date().getFullYear()} Talentys. Todos os direitos
+        reservados.
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}
