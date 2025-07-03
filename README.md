@@ -96,11 +96,6 @@ export default tseslint.config([
 └── eslint.config.js     # (Opcional) Configuração do ESLint
 ```
 
-### 🧑‍🤝‍🧑 Contribuidores
-
-* **Bruno Godoy** (@Brunogodoy2911)
-* **Lívia D’Alexandri Cunha** (@liviadalexandri) ([github.com][1])
-
 ### 📌 Tecnologias utilizadas
 
 * **Vite**: bundler moderno com recarregamento rápido (HMR)&#x20;
