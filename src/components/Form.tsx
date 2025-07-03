@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Button } from "./Button";
 
 export function Form() {
+  const [isLoading, setIsLoading] = useState(false);
+
   const [formulario, setFormulario] = useState({
     nome: "",
     email: "",
@@ -19,20 +21,29 @@ export function Form() {
 
   function enviarFormulario(e: React.FormEvent) {
     e.preventDefault();
-    alert("Colaborador cadastrado com sucesso!");
-    setFormulario({
-      nome: "",
-      email: "",
-      telefone: "",
-      foto: "",
-      curriculo: "",
-    });
+
+    setIsLoading(true);
+
+    setTimeout(() => {
+      alert("Colaborador cadastrado com sucesso!");
+      setFormulario({
+        nome: "",
+        email: "",
+        telefone: "",
+        foto: "",
+        curriculo: "",
+      });
+      setIsLoading(false);
+    }, 1000);
   }
 
   return (
-    <div className="min-h-screen bg-space-cadet flex items-center justify-center px-4">
+    <div
+      id="demonstration"
+      className="min-h-screen bg-space-cadet flex items-center justify-center px-4"
+    >
       <div className="max-w-4xl w-full ">
-        <div className="text-center mb-8">
+        <div className="text-center mb-20">
           <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">
             Cadastre um Colaborador (Demonstração)
           </h1>
@@ -57,6 +68,7 @@ export function Form() {
                 value={formulario.nome}
                 onChange={atualizarEstado}
                 className="w-full border border-gray-300 rounded-md px-3 py-2"
+                required
               />
             </div>
 
@@ -71,6 +83,7 @@ export function Form() {
                 value={formulario.email}
                 onChange={atualizarEstado}
                 className="w-full border border-gray-300 rounded-md px-3 py-2"
+                required
               />
             </div>
 
@@ -83,8 +96,8 @@ export function Form() {
                 value={formulario.telefone}
                 onChange={atualizarEstado}
                 className="w-full border border-gray-300 rounded-md px-3 py-2"
-              />export default Form;
-
+                required
+              />
             </div>
 
             <div>
@@ -98,6 +111,7 @@ export function Form() {
                 value={formulario.foto}
                 onChange={atualizarEstado}
                 className="w-full border border-gray-300 rounded-md px-3 py-2"
+                required
               />
             </div>
           </div>
@@ -112,10 +126,11 @@ export function Form() {
               value={formulario.curriculo}
               onChange={atualizarEstado}
               className="w-full border border-gray-300 rounded-md px-3 py-2"
+              required
             />
           </div>
 
-          <Button type="submit" className="mx-auto">
+          <Button type="submit" className="mx-auto" isLoading={isLoading}>
             Adicionar Colaborador
           </Button>
         </form>

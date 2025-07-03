@@ -1,10 +1,17 @@
+import { Feature } from "../components/Feature";
+import { Footer } from "../components/Footer";
 import { Form } from "../components/Form";
+import { Hero } from "../components/Hero";
+import { Navbar } from "../components/Navbar";
 
 export function Page() {
   return (
-    // Para testar seus componentes adicione aqui dentro da div
-    <div>
+    <div className="flex flex-col">
+      <Navbar />
+      <Hero />
+      <Feature />
       <Form />
+      <Footer />
     </div>
   );
 }
