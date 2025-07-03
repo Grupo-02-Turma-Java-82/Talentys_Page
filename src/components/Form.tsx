@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Button } from "./Button";
 
-function Form() {
+export function Form() {
   const [formulario, setFormulario] = useState({
     nome: "",
     email: "",
@@ -29,23 +30,26 @@ function Form() {
   }
 
   return (
-    <div className="min-h-screen bg-[#1B1F3B] flex items-center justify-center px-4">
+    <div className="min-h-screen bg-space-cadet flex items-center justify-center px-4">
       <div className="max-w-4xl w-full ">
-        <div className="text-center mb-8 ">
-          <h1 className="text-[#FFFFFF] text-3xl md:text-4xl font-bold mb-2 ">
+        <div className="text-center mb-8">
+          <h1 className="text-white text-3xl md:text-4xl font-bold mb-4">
             Cadastre um Colaborador (Demonstração)
           </h1>
-          <p className="text-[#FFFFFF] text-base max-w-2xl mx-auto">
-            Veja como é simples adicionar um novo talento à sua equipe. Este é um formulário visual e não armazena dados.
+          <p className="text-white text-xl max-w-xl mx-auto font-medium">
+            Veja como é simples adicionar um novo talento à sua equipe. Este é
+            um formulário visual e não armazena dados.
           </p>
         </div>
         <form
-            onSubmit={enviarFormulario}
-            className="rounded-xl shadow-md p-12 space-y-6 mx-auto bg-[#FFFFFF]"
-          >
+          onSubmit={enviarFormulario}
+          className="rounded-xl shadow-md p-12 space-y-6 mx-auto bg-white"
+        >
           <div className="grid md:grid-cols-2 gap-4">
             <div>
-              <label className="block text-sm font-medium mb-1">Nome Completo</label>
+              <label className="block text-sm font-medium mb-1">
+                Nome Completo
+              </label>
               <input
                 name="nome"
                 type="text"
@@ -57,7 +61,9 @@ function Form() {
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">E-mail Corporativo</label>
+              <label className="block text-sm font-medium mb-1">
+                E-mail Corporativo
+              </label>
               <input
                 name="email"
                 type="email"
@@ -77,11 +83,14 @@ function Form() {
                 value={formulario.telefone}
                 onChange={atualizarEstado}
                 className="w-full border border-gray-300 rounded-md px-3 py-2"
-              />
+              />export default Form;
+
             </div>
 
             <div>
-              <label className="block text-sm font-medium mb-1">URL da Foto de Perfil</label>
+              <label className="block text-sm font-medium mb-1">
+                URL da Foto de Perfil
+              </label>
               <input
                 name="foto"
                 type="text"
@@ -93,7 +102,9 @@ function Form() {
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">URL do Currículo</label>
+            <label className="block text-sm font-medium mb-1">
+              URL do Currículo
+            </label>
             <input
               name="curriculo"
               type="text"
@@ -104,18 +115,11 @@ function Form() {
             />
           </div>
 
-          <div className="text-center">
-            <button
-              type="submit"
-              className="bg-[#FF6B6B] hover:bg-[#e95a5a] text-gray-50 font-semibold px-6 py-2 rounded-md transition duration-300"
-            >
-              Adicionar Colaborador
-            </button>
-          </div>
+          <Button type="submit" className="mx-auto">
+            Adicionar Colaborador
+          </Button>
         </form>
       </div>
     </div>
   );
 }
-
-export default Form;
