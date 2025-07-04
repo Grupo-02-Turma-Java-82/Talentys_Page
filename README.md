@@ -1,6 +1,3 @@
-Aqui está um modelo de README elaborado para o seu repositório **Talentys\_Page** — você pode ajustar conforme as especificidades do projeto (como rotas, componentes, scripts adicionais etc.).
-
----
 
 ## 📌 Talentys Page
 
