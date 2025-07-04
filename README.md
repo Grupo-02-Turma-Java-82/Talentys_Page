@@ -1,126 +1,116 @@
+<div align="center">
 
-## 📌 Talentys Page
+# Talentys - Gestão de Pessoas Simplificada
 
-Site do Projeto **Talentys**, desenvolvido em **React**, **TypeScript** e **Vite**, com configurações modernas de ESLint e plugins para React.
+![Capa do Projeto](https://ik.imagekit.io/brunogodoy/imagens_portfolio/LogoSemFundo.png?updatedAt=1751540719796)
+
+<p>
+  <strong>Talentys</strong> é uma landing page moderna e interativa, desenvolvida para demonstrar uma plataforma completa de gestão de Recursos Humanos. O projeto foi construído com as tecnologias mais atuais do ecossistema React, incluindo <strong>Vite</strong>, <strong>TypeScript</strong>, e estilizado com <strong>Tailwind CSS</strong> e <strong>Shadcn/UI</strong> para uma interface elegante e responsiva.
+</p>
+
+</div>
+
+---
+
+## 🔮 Visão Geral
+
+O objetivo desta página é apresentar as funcionalidades-chave de um sistema de RH, como gestão de colaboradores, recrutamento e controle de jornada, de uma forma visualmente atraente. A interface é totalmente responsiva, garantindo uma experiência de usuário consistente em desktops e dispositivos móveis.
+
+### ✨ Funcionalidades Implementadas
+
+* **Navbar Responsiva**: Menu de navegação elegante que se adapta a telas menores, utilizando um componente `Sheet` (painel lateral) para o menu mobile.
+* **Seções Interativas**: A página é dividida em seções claras (`Hero`, `Funcionalidades`, `Demonstração`) com navegação suave ativada por scroll.
+* **Componentização com Shadcn/UI**: Uso de componentes reutilizáveis e acessíveis como `Button`, `Sheet`, e `Separator`, seguindo as melhores práticas de design system.
+* **Formulário de Demonstração**: Um formulário interativo (apenas visual, não armazena dados) para demonstrar o cadastro de novos colaboradores, com feedback de carregamento.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+Este projeto foi construído utilizando um stack moderno e focado em performance e produtividade:
+
+* **Framework**: [React](https://react.dev/)
+* **Build Tool**: [Vite](https://vitejs.dev/)
+* **Linguagem**: [TypeScript](https://www.typescriptlang.org/)
+* **Estilização**:
+    * [Tailwind CSS](https://tailwindcss.com/)
+    * [Shadcn/UI](https://ui.shadcn.com/) para componentes de UI
+* **Ícones**: [Lucide React](https://lucide.dev/guide/packages/lucide-react) e [Phosphor Icons](https://phosphoricons.com/)
+
+---
+
+## 🛠️ Começando
+
+Siga os passos abaixo para executar o projeto localmente.
 
 ### Pré-requisitos
 
-* Node.js (>= 16) e npm (ou Yarn)
+* [Node.js](https://nodejs.org/en) (versão 18 ou superior)
+* [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
 
-### 🚀 Instalação
+### Instalação
 
-```bash
-# Clone o repositório
-git clone https://github.com/Grupo-02-Turma-Java-82/Talentys_Page.git
-cd Talentys_Page
+1.  **Clone o repositório:**
+    ```sh
+    git clone [https://github.com/Grupo-02-Turma-Java-82/Talentys_Page.git](https://github.com/Grupo-02-Turma-Java-82/Talentys_Page.git)
+    ```
 
-# Instale as dependências
-npm install
-# ou
-yarn install
+2.  **Acesse o diretório do projeto:**
+    ```sh
+    cd Talentys_Page
+    ```
+
+3.  **Instale as dependências:**
+    ```sh
+    npm install
+    ```
+
+### Executando o Projeto
+
+Para iniciar o servidor de desenvolvimento com Hot-Reload, execute:
+
+```sh
+npm run dev
+```
+Abra http://localhost:5173 (ou a porta indicada no seu terminal) para ver o projeto em ação.
+
+### 📂 Estrutura de Arquivos
+A estrutura do projeto é organizada para manter uma clara separação de responsabilidades, facilitando a manutenção e escalabilidade.
+```
+/src
+├── components/         # Componentes React reutilizáveis
+│   ├── ui/             # Componentes base do Shadcn/UI (Button, Sheet, etc.)
+│   ├── CardFeature.tsx # Card para a seção de funcionalidades
+│   ├── Demonstration.tsx # Seção de demonstração com o formulário
+│   ├── Feature.tsx     # Seção de funcionalidades
+│   ├── Footer.tsx      # Rodapé da página
+│   ├── Form.tsx        # Formulário de cadastro
+│   ├── Hero.tsx        # Seção principal de boas-vindas
+│   └── Navbar.tsx      # Barra de navegação responsiva
+├── lib/
+│   └── utils.ts        # Funções utilitárias (ex: `cn` para classes)
+├── pages/
+│   └── Page.tsx        # Componente que organiza a estrutura da página
+├── App.tsx             # Componente raiz da aplicação
+└── main.tsx            # Ponto de entrada da aplicação React
 ```
 
-### 🧩 Scripts disponíveis
+### Scripts Disponíveis
+npm run dev: Inicia o servidor de desenvolvimento.
 
-| Script            | Descrição                                  |
-| ----------------- | ------------------------------------------ |
-| `npm run dev`     | Inicia o servidor de desenvolvimento (HMR) |
-| `npm run build`   | Cria a versão otimizada para produção      |
-| `npm run preview` | Servidor para pré-visualização do build    |
-| `npm run lint`    | Executa ESLint nos arquivos `.ts` e `.tsx` |
+npm run build: Compila e otimiza o projeto para produção na pasta dist/.
 
-### 🛠️ Configuração do ESLint
+npm run preview: Inicia um servidor local para visualizar a versão de produção.
 
-O projeto já vem com ESLint configurado para TypeScript. Para adicionar regras mais avançadas:
+### 🤝 Contribuindo
+Contribuições são sempre bem-vindas! Se você tem sugestões para melhorar o projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
-```ts
-// Exemplificando o uso do tseslint.config
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      ...tseslint.configs.recommendedTypeChecked,
-      // ou stricter/stylistic, conforme desejado
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      }
-    },
-  },
-]);
-```
+Faça um fork do projeto.
 
-E para melhorar a lintagem no React, considere adicionar:
+Crie uma nova branch (git checkout -b feature/sua-feature).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Faça o commit das suas alterações (git commit -m 'Adiciona sua-feature').
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      reactX.configs['recommended-typescript'],
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      }
-    },
-  },
-]);
-```
+Envie para a sua branch (git push origin feature/sua-feature).
 
-### 📂 Estrutura do projeto
-
-```
-├── public/              # Recursos estáticos
-├── src/
-│   ├── components/      # Componentes React reutilizáveis
-│   ├── pages/           # Páginas principais
-│   ├── styles/          # CSS ou módulos de estilo
-│   └── main.tsx         # Entry point da aplicação
-├── index.html           # HTML principal
-├── vite.config.ts       # Configuração do Vite
-├── tsconfig.json        # Configuração do TypeScript
-└── eslint.config.js     # (Opcional) Configuração do ESLint
-```
-
-### 📌 Tecnologias utilizadas
-
-* **Vite**: bundler moderno com recarregamento rápido (HMR)&#x20;
-* **React 18+** com **TypeScript**
-* **ESLint** com suporte a regras tipo “type‑checked”
-
-### ✅ Como utilizar
-
-1. Executar o servidor de desenvolvimento
-2. Acesse `http://localhost:3000` (ou porta mostrada no terminal)
-3. Edite arquivos em `src/`; o navegador recarrega automaticamente
-
-### 🧪 Build e deploy
-
-* Gere o build otimizado: `npm run build`
-* Hospede o conteúdo de `dist/` em um servidor estático (Netlify, Vercel, GitHub Pages etc.)
-
----
-
-**Boas práticas e sugestões futuras:**
-
-* Adicionar **React Router** para navegação
-* Implementar testes com **Jest** + **React Testing Library**
-* Integrar **CI/CD** (ex: GitHub Actions) para build e lint automáticos
-* Utilizar **Swc** plugin para compilação ainda mais rápida
-
----
-
-Esse modelo cobre os principais aspectos do projeto. Fique à vontade para personalizar os comandos, scripts e diretórios conforme seu fluxo de trabalho. Se quiser, posso acrescentar seções como requisitos API, screenshots, roadmap ou como contribuir. É só pedir! 🚀
-
-[1]: https://github.com/Grupo-02-Turma-Java-82/Talentys_Page?utm_source=chatgpt.com "GitHub - Grupo-02-Turma-Java-82/Talentys_Page: Site do Projeto Talentys"
+Abra um Pull Request.
