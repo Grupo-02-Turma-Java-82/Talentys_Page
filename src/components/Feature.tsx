@@ -1,4 +1,4 @@
-import { User, UserPlusIcon, ClockIcon } from "@phosphor-icons/react";
+import { UserIcon, UserPlusIcon, ClockIcon } from "@phosphor-icons/react";
 import { CardFeature } from "./CardFeature";
 
 export function Feature() {
@@ -16,7 +16,7 @@ export function Feature() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <CardFeature
-            icon={<User className="h-8 w-8 text-bittersweet" />}
+            icon={<UserIcon className="h-8 w-8 text-bittersweet" />}
             title="Gestão de Colaboradores"
             description="Cadastro e gerenciamento completo de colaboradores com informações detalhadas e organizadas."
           />
