@@ -1,6 +1,6 @@
+import { Demonstration } from "../components/Demonstration";
 import { Feature } from "../components/Feature";
 import { Footer } from "../components/Footer";
-import { Form } from "../components/Form";
 import { Hero } from "../components/Hero";
 import { Navbar } from "../components/Navbar";
 
@@ -10,7 +10,7 @@ export function Page() {
       <Navbar />
       <Hero />
       <Feature />
-      <Form />
+      <Demonstration />
       <Footer />
     </div>
   );
