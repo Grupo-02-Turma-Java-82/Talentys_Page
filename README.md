@@ -52,7 +52,7 @@ Siga os passos abaixo para executar o projeto localmente.
 
 1.  **Clone o repositório:**
     ```sh
-    git clone [https://github.com/Grupo-02-Turma-Java-82/Talentys_Page.git](https://github.com/Grupo-02-Turma-Java-82/Talentys_Page.git)
+    git clone [https://github.com/Grupo-02-Turma-Java-82/Talentys_Page.git]
     ```
 
 2.  **Acesse o diretório do projeto:**
@@ -94,13 +94,19 @@ A estrutura do projeto é organizada para manter uma clara separação de respon
 ├── App.tsx             # Componente raiz da aplicação
 └── main.tsx            # Ponto de entrada da aplicação React
 ```
+## 6. Participantes
 
-### Scripts Disponíveis
-npm run dev: Inicia o servidor de desenvolvimento.
+Este projeto foi desenvolvido por:
 
-npm run build: Compila e otimiza o projeto para produção na pasta dist/.
-
-npm run preview: Inicia um servidor local para visualizar a versão de produção.
+| Nome                | GitHub                                           | Função                 |
+|---------------------|--------------------------------------------------|------------------------|
+| Bruno Godoy         | [Brunogodoy2911](https://github.com/Brunogodoy2911) | Dev/Master         |
+| Felipe Peronica     | [feperonica](https://github.com/feperonica)     |  Dev      |
+| Jovani de Souza     | [JovaniOUnico](https://github.com/JovaniOUnico) | Dev            |
+| Lívia D’Alexandri   | [liviadalexandri](https://github.com/liviadalexandri) | Dev               |
+| Luiza Gonçalves     | [luizaeg](https://github.com/luizaeg)           | Dev                 |
+| Maria Helena        | [squarcinihelena](https://github.com/squarcinihelena) | Dev               |
+| Rafaela Giometti    | [rafagiometti](https://github.com/rafagiometti) | Dev                    |
 
 ### 🤝 Contribuindo
 Contribuições são sempre bem-vindas! Se você tem sugestões para melhorar o projeto, sinta-se à vontade para abrir uma issue ou enviar um pull request.
